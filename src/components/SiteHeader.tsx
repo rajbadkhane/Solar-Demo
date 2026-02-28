@@ -15,7 +15,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ active }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-blue-200/70 bg-[#f8f4e8]/92 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-amber-200/70 bg-[#f8f4e8]/92 backdrop-blur">
       <div className="solar-container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -37,7 +37,7 @@ export function SiteHeader({ active }: SiteHeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={item.href === active ? "text-blue-900" : "hover:-translate-y-0.5 hover:text-blue-900"}
+              className={item.href === active ? "text-amber-900" : "hover:-translate-y-0.5 hover:text-amber-900"}
             >
               {item.label}
             </Link>
@@ -46,17 +46,18 @@ export function SiteHeader({ active }: SiteHeaderProps) {
         </nav>
 
         <details className="relative lg:hidden">
-          <summary className="list-none rounded-xl border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 hover:border-blue-400">Menu</summary>
+          <summary className="list-none rounded-xl border border-amber-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 hover:border-amber-400">Menu</summary>
           <div className="absolute right-0 mt-2 w-56 rounded-xl border border-slate-200 bg-white p-3 shadow-lg">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="block rounded-lg px-3 py-2 text-sm hover:bg-blue-50">
+              <Link key={item.href} href={item.href} className="block rounded-lg px-3 py-2 text-sm hover:bg-amber-50">
                 {item.label}
               </Link>
             ))}
-            <Link href="/contact" className="mt-2 block rounded-full bg-blue-900 px-3 py-2 text-center text-sm font-semibold text-white">Consultation</Link>
+            <Link href="/contact" className="mt-2 block rounded-full bg-[#2b2f3a] px-3 py-2 text-center text-sm font-semibold text-white">Consultation</Link>
           </div>
         </details>
       </div>
     </header>
   );
 }
+

@@ -90,8 +90,14 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full">
       <SiteHeader active="/" />
-      <main className="pb-20">
+      <main className="pb-36 md:pb-20">
         <HeroParallax />
+
+        <section id="franchise-form" className="solar-container py-6">
+          <Reveal>
+            <HomeFranchiseForm />
+          </Reveal>
+        </section>
 
         <section className="solar-container py-8">
           <div className="grid gap-5 md:grid-cols-3">
@@ -100,7 +106,7 @@ export default function Home() {
                 <article className="soft-card section-glow p-6">
                   <h2 className="text-2xl font-bold text-slate-900">{card.title}</h2>
                   <p className="mt-3 text-sm text-slate-700">{card.text}</p>
-                  <Link href={card.href} className="mt-5 inline-block text-sm font-semibold text-blue-900 hover:text-blue-700">Explore more</Link>
+                  <Link href={card.href} className="mt-5 inline-block text-sm font-semibold text-amber-900 hover:text-amber-700">Explore more</Link>
                 </article>
               </Reveal>
             ))}
@@ -110,7 +116,7 @@ export default function Home() {
         <section className="solar-container py-10">
           <Reveal>
             <div className="soft-card section-glow overflow-hidden p-7 md:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">Delivery Journey</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">Delivery Journey</p>
               <h2 className="mt-2 text-4xl font-bold text-slate-900">A high-trust workflow from day one</h2>
               <div className="mt-6 grid gap-3 md:grid-cols-2">
                 {journey.map((step, i) => (
@@ -130,16 +136,16 @@ export default function Home() {
         <section className="solar-container py-4">
           <div className="grid gap-5 lg:grid-cols-2">
             <Reveal delayMs={80}>
-              <article className="section-glow overflow-hidden rounded-3xl border border-blue-900/20 bg-[linear-gradient(120deg,#112b7d,#2147aa)] p-7 text-white shadow-[0_14px_34px_rgba(17,40,109,0.26)]">
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-sky-200">Savings And Subsidy</p>
+              <article className="section-glow overflow-hidden rounded-3xl border border-amber-900/20 bg-[linear-gradient(120deg,#2a2e3a,#3a404d)] p-7 text-white shadow-[0_14px_34px_rgba(31,35,44,0.26)]">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Savings And Subsidy</p>
                 <h2 className="mt-2 text-4xl font-bold">Check your annual return before install</h2>
-                <p className="mt-3 text-sm text-blue-100">Use our estimation framework to compare project cost, subsidy, payback window, and generation performance.</p>
-                <Link href="/savings" className="mt-6 inline-block rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-blue-900 hover:-translate-y-1">Open Savings Center</Link>
+                <p className="mt-3 text-sm text-amber-100">Use our estimation framework to compare project cost, subsidy, payback window, and generation performance.</p>
+                <Link href="/savings" className="mt-6 inline-block rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-amber-900 hover:-translate-y-1">Open Savings Center</Link>
               </article>
             </Reveal>
             <Reveal delayMs={180}>
               <article className="soft-card section-glow p-7">
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">Support Desk</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">Support Desk</p>
                 <h2 className="mt-2 text-4xl font-bold text-slate-900">Answers to every pre-install question</h2>
                 <p className="mt-3 text-sm text-slate-700">Explore technical, billing, subsidy, and maintenance FAQs or directly talk with our support team.</p>
                 <div className="mt-6 flex gap-3">
@@ -154,7 +160,7 @@ export default function Home() {
         <section className="solar-container py-10">
           <Reveal>
             <div className="soft-card section-glow overflow-hidden p-7 md:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">EMI and Finance</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">EMI and Finance</p>
               <h2 className="mt-2 text-4xl font-bold text-slate-900">Pay monthly from your electricity savings</h2>
               <p className="mt-3 text-sm text-slate-700">
                 Structured financing helps you install solar with lower upfront burden. Select a plan based on system size and expected monthly bill offset.
@@ -163,8 +169,8 @@ export default function Home() {
               <div className="mt-6 grid gap-4 lg:grid-cols-3">
                 {emiPlans.map((plan, i) => (
                   <Reveal key={plan.name} delayMs={i * 100}>
-                    <article className="rounded-2xl border border-blue-200 bg-[linear-gradient(180deg,#f4f8ff,#e9f1ff)] p-5 transition hover:-translate-y-1">
-                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-blue-800">{plan.name}</p>
+                    <article className="rounded-2xl border border-amber-200 bg-[linear-gradient(180deg,#fffdf6,#fff2d8)] p-5 transition hover:-translate-y-1">
+                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-amber-700">{plan.name}</p>
                       <p className="mt-2 font-heading text-3xl font-bold text-slate-900">{plan.emi}</p>
                       <div className="mt-4 space-y-1.5 text-sm text-slate-700">
                         <p><strong>System:</strong> {plan.system}</p>
@@ -177,7 +183,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-blue-200 bg-blue-50 p-4">
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4">
                 <p className="text-sm text-slate-700">
                   EMI rates are indicative for demo presentation and depend on lender policy, credit profile, and final project scope.
                 </p>
@@ -192,7 +198,7 @@ export default function Home() {
         <section className="solar-container py-10">
           <Reveal>
             <div className="soft-card section-glow p-7 md:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">Who We Serve</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">Who We Serve</p>
               <h2 className="mt-2 text-4xl font-bold text-slate-900">Solar programs for different customer goals</h2>
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 {customerTypes.map((item, i) => (
@@ -213,7 +219,7 @@ export default function Home() {
             {trustStats.map((stat, i) => (
               <Reveal key={stat.label} delayMs={i * 90}>
                 <article className="soft-card section-glow p-5 text-center">
-                  <p className="font-heading text-3xl font-bold text-blue-900">{stat.value}</p>
+                  <p className="font-heading text-3xl font-bold text-amber-900">{stat.value}</p>
                   <p className="mt-1 text-xs uppercase tracking-[0.12em] text-slate-600">{stat.label}</p>
                 </article>
               </Reveal>
@@ -221,16 +227,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="franchise-form" className="solar-container py-6">
-          <Reveal>
-            <HomeFranchiseForm />
-          </Reveal>
-        </section>
-
         <section className="solar-container py-4">
           <Reveal>
             <div className="soft-card section-glow p-7">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">Why This Demo Stands Out</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">Why This Demo Stands Out</p>
               <h2 className="mt-2 text-4xl font-bold text-slate-900">World-class visual and content presentation layer</h2>
               <div className="mt-4 space-y-2">
                 {awardHighlights.map((item, index) => (
@@ -243,9 +243,9 @@ export default function Home() {
           </Reveal>
         </section>
 
-        <section className="solar-container py-12">
+        <section className="solar-container py-12 hidden md:block">
           <Reveal>
-            <div className="section-glow rounded-3xl bg-[linear-gradient(140deg,#dfe5fb,#e7e9f8)] p-8 text-center md:p-12">
+            <div className="section-glow rounded-3xl bg-[linear-gradient(140deg,#fff7e7,#f7edd3)] p-8 text-center md:p-12">
               <p className="text-lg text-slate-700">Save electricity bills by switching to solar</p>
               <Link href="/contact" className="blue-btn mt-5 inline-block px-10 py-4 text-xl font-bold animate-pulse">
                 Book a Free Consultation
@@ -254,8 +254,20 @@ export default function Home() {
           </Reveal>
         </section>
       </main>
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-amber-200 bg-[#fff4dc]/95 px-4 pb-4 pt-3 shadow-[0_-10px_28px_rgba(93,66,13,0.18)] backdrop-blur md:hidden">
+        <div className="mx-auto max-w-sm text-center">
+          <p className="text-sm text-slate-700">Save electricity bills by switching to solar</p>
+          <Link
+            href="/contact"
+            className="mt-2 inline-block w-full rounded-full bg-[linear-gradient(120deg,#1f232c,#3a404d)] px-6 py-3 text-lg font-semibold text-white shadow-[0_10px_20px_rgba(31,35,44,0.3)] transition hover:-translate-y-0.5"
+          >
+            Book a Free Consultation &rsaquo;
+          </Link>
+        </div>
+      </div>
       <SiteFooter />
       <SocialFloat />
     </div>
   );
 }
+

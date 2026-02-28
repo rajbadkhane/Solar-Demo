@@ -69,7 +69,7 @@ export default function FaqPage() {
                           setActiveTab(tab.key);
                           setOpenIndex(0);
                         }}
-                        className={`px-3 py-3 text-sm font-semibold md:text-[1.1rem] ${activeTab === tab.key ? "bg-[#1d1ea8] text-white" : "text-slate-900 hover:bg-blue-50"}`}
+                        className={`px-3 py-3 text-sm font-semibold md:text-[1.1rem] ${activeTab === tab.key ? "bg-[#1d1ea8] text-white" : "text-slate-900 hover:bg-amber-50"}`}
                       >
                         {tab.label}
                       </button>
@@ -87,7 +87,7 @@ export default function FaqPage() {
                           onClick={() => setOpenIndex(isOpen ? -1 : index)}
                           className="flex w-full items-start gap-4 text-left"
                         >
-                          <span className="mt-0.5 text-2xl font-bold text-blue-900">{isOpen ? "-" : "+"}</span>
+                          <span className="mt-0.5 text-2xl font-bold text-amber-900">{isOpen ? "-" : "+"}</span>
                           <span className="text-xl font-semibold text-slate-900">{item.q}</span>
                         </button>
                         {isOpen && <p className="mt-3 pl-9 text-sm text-slate-700">{item.a}</p>}
@@ -119,7 +119,7 @@ export default function FaqPage() {
         <Reveal delayMs={180}>
           <section className="mt-8 overflow-hidden rounded-3xl bg-[linear-gradient(120deg,#112b7d,#2147aa)] p-8 text-white md:p-10">
             <h2 className="text-4xl font-bold">Need project-specific answers?</h2>
-            <p className="mt-3 text-blue-100">Share your location, load profile, and roof details to receive exact guidance from our technical team.</p>
+            <p className="mt-3 text-amber-100">Share your location, load profile, and roof details to receive exact guidance from our technical team.</p>
             <Link href="/contact" className="solar-btn mt-6 inline-block px-6 py-3 text-sm">Talk To Engineer</Link>
           </section>
         </Reveal>
@@ -129,3 +129,4 @@ export default function FaqPage() {
     </div>
   );
 }
+

@@ -35,21 +35,21 @@ export function HeroParallax() {
 
   return (
     <section className="solar-container pb-12 pt-8 lg:pt-10">
-      <div className="section-glow overflow-hidden rounded-3xl bg-[linear-gradient(120deg,#102a7f_0%,#1d3f9f_55%,#17398f_100%)] text-white">
+      <div className="section-glow overflow-hidden rounded-3xl bg-[linear-gradient(120deg,#242833_0%,#323845_55%,#2b313d_100%)] text-white">
         <div style={{ transform: `translateY(${Math.min(offset, 16)}px)` }} className="p-6 sm:p-8">
-          <p className="mb-3 inline-flex rounded-full border border-white/30 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
+          <p className="mb-3 inline-flex rounded-full border border-amber-200/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
             Switch To Solar In Bhopal And Beyond
           </p>
           <h1 className="max-w-2xl text-4xl font-bold leading-tight sm:text-5xl">
-            <span className="text-cyan-300">Switch to solar</span>, at Zero Investment!
+            <span className="text-amber-300">Switch to solar</span>, at Zero Investment!
           </h1>
-          <p className="mt-4 max-w-xl text-base text-blue-100 sm:text-lg">
+          <p className="mt-4 max-w-xl text-base text-amber-100 sm:text-lg">
             Government subsidy covers your down payment and monthly solar savings help offset your EMI.
           </p>
         </div>
 
-        <div className="relative overflow-hidden border-y border-white/10 bg-[#0f2d78]">
-          <div className="relative h-44 w-full sm:h-56 md:h-64 lg:h-72">
+        <div className="relative overflow-hidden border-y border-white/10 bg-[#2f3441]">
+          <div className="relative h-56 w-full sm:h-[17rem] md:h-[20rem] lg:h-[23rem]">
             <div
               className="flex h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{ transform: `translateX(-${activeSlide * 100}%)` }}
@@ -61,7 +61,7 @@ export function HeroParallax() {
                     alt={slide.alt}
                     fill
                     priority={index === 0}
-                    className="object-contain object-center"
+                    className="object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/12 to-transparent" />
                 </div>
@@ -81,8 +81,8 @@ export function HeroParallax() {
           </div>
         </div>
 
-        <div className="bg-cyan-500 px-4 py-3 text-center text-xl font-bold text-white sm:text-3xl">
-          Bharat ki <span className="text-blue-950">#1</span> home solar company*
+        <div className="bg-[linear-gradient(120deg,#f2ad1f,#ffd66a)] px-4 py-3 text-center text-xl font-bold text-[#1f232c] sm:text-3xl">
+          Bharat ki <span className="text-[#111319]">#1</span> home solar company*
         </div>
 
         <div className="p-6 sm:p-8">
@@ -94,7 +94,7 @@ export function HeroParallax() {
                 className="rounded-2xl border border-white/20 bg-white/10 p-3 transition duration-300 hover:-translate-y-1 hover:bg-white/15"
               >
                 <p className="font-heading text-2xl font-bold text-yellow-300">{item.title}</p>
-                <p className="mt-1 text-xs text-blue-100">{item.desc}</p>
+                <p className="mt-1 text-xs text-amber-50">{item.desc}</p>
               </article>
             ))}
           </div>
@@ -108,3 +108,4 @@ export function HeroParallax() {
     </section>
   );
 }
+

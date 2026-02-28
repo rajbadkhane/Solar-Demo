@@ -57,17 +57,17 @@ export function HomeFranchiseForm() {
     <section className="soft-card section-glow p-5 md:p-7">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-800">Franchise Lead Form</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">Franchise Lead Form</p>
           <h2 className="mt-1 text-4xl font-bold text-slate-900 md:text-5xl">Franchise and Consultation Form</h2>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">Share details to connect with our business and solar setup team.</p>
         </div>
-        <div className="rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-900">
+        <div className="rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-semibold text-amber-900">
           Priority Callback
         </div>
       </div>
 
-      <div className="mt-4 rounded-xl bg-[linear-gradient(95deg,#17368d,#2148ad)] px-4 py-3 text-center text-sm font-semibold uppercase tracking-[0.15em] text-yellow-300 shadow-[0_10px_20px_rgba(23,54,141,0.28)] md:text-base">
-        Get APN Solar Franchise in 59,000 only and start your own business.
+      <div className="mt-4 rounded-xl bg-[linear-gradient(95deg,#2a2e3a,#3b414d)] px-4 py-3 text-center text-sm font-semibold uppercase tracking-[0.15em] text-yellow-300 shadow-[0_10px_20px_rgba(31,35,44,0.28)] md:text-base">
+        Get Agnihotri Solar System Franchise in 59,000 only and start your own business.
       </div>
 
       <form onSubmit={onSubmit} className="mt-6 grid gap-4 md:grid-cols-2">
@@ -79,7 +79,7 @@ export function HomeFranchiseForm() {
                 required
                 value={form.firstName}
                 onChange={(e) => setForm((p) => ({ ...p, firstName: e.target.value }))}
-                className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+                className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
               />
               <p className="mt-1 text-xs text-slate-500">First</p>
             </div>
@@ -87,7 +87,7 @@ export function HomeFranchiseForm() {
               <input
                 value={form.lastName}
                 onChange={(e) => setForm((p) => ({ ...p, lastName: e.target.value }))}
-                className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+                className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
               />
               <p className="mt-1 text-xs text-slate-500">Last</p>
             </div>
@@ -101,7 +101,7 @@ export function HomeFranchiseForm() {
             type="email"
             value={form.email}
             onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
           />
         </div>
 
@@ -111,7 +111,7 @@ export function HomeFranchiseForm() {
             required
             value={form.phone}
             onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
           />
         </div>
 
@@ -121,7 +121,7 @@ export function HomeFranchiseForm() {
             required
             value={form.city}
             onChange={(e) => setForm((p) => ({ ...p, city: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
           />
         </div>
 
@@ -131,7 +131,7 @@ export function HomeFranchiseForm() {
             required
             value={form.service}
             onChange={(e) => setForm((p) => ({ ...p, service: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 bg-white px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 bg-white px-3 py-2.5 text-sm"
           >
             <option>Smart Franchise Partner</option>
             <option>Residential Rooftop Solar</option>
@@ -146,7 +146,7 @@ export function HomeFranchiseForm() {
             rows={4}
             value={form.text}
             onChange={(e) => setForm((p) => ({ ...p, text: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
           />
         </div>
 
@@ -159,3 +159,4 @@ export function HomeFranchiseForm() {
     </section>
   );
 }
+

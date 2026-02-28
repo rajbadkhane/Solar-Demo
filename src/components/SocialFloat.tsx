@@ -3,7 +3,7 @@ export function SocialFloat() {
     <>
       <div className="pointer-events-none fixed left-1 top-[58%] z-40 flex -translate-y-1/2 flex-col gap-2 sm:left-2 sm:top-1/2">
         <a
-          className="pointer-events-auto grid h-16 w-11 place-items-center rounded-xl border border-blue-200 bg-white text-[#1877F2] shadow-lg animate-pulse hover:-translate-y-1 sm:h-20 sm:w-12"
+          className="pointer-events-auto grid h-16 w-11 place-items-center rounded-xl border border-amber-200 bg-white text-[#1877F2] shadow-lg animate-pulse hover:-translate-y-1 sm:h-20 sm:w-12"
           href="https://www.facebook.com/share/1HNfojRJw8/"
           target="_blank"
           rel="noreferrer"
@@ -30,3 +30,4 @@ export function SocialFloat() {
     </>
   );
 }
+

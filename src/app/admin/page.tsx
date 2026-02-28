@@ -83,14 +83,14 @@ export default function BillingSystemPage() {
 
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#efebdb_0%,#e7eefb_100%)] pb-14">
-      <header className="border-b border-blue-200/70 bg-[#f8f4e8]">
+      <header className="border-b border-amber-200/70 bg-[#f8f4e8]">
         <div className="solar-container flex flex-wrap items-center justify-between gap-3 py-5">
           <div>
             <p className="font-heading text-3xl font-bold text-slate-900">Billing System</p>
             <p className="text-sm text-slate-600">Agnihotri Solar System | Finance + Operations Console</p>
           </div>
           <div className="flex gap-2">
-            <Link href="/" className="rounded-full border border-blue-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-blue-500">Website</Link>
+            <Link href="/" className="rounded-full border border-amber-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-blue-500">Website</Link>
             <button className="blue-btn px-4 py-2 text-sm font-semibold">Export Demo Invoice</button>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function BillingSystemPage() {
           <article className="soft-card section-glow fade-in-up p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Active Installations</p>
             <p className="mt-2 font-heading text-4xl font-bold text-slate-900">64</p>
-            <p className="mt-1 text-xs text-blue-700">Linked with billing milestones</p>
+            <p className="mt-1 text-xs text-amber-700">Linked with billing milestones</p>
           </article>
         </section>
 
@@ -159,9 +159,9 @@ export default function BillingSystemPage() {
               </label>
             </div>
 
-            <div className="mt-6 overflow-x-auto rounded-2xl border border-blue-200">
+            <div className="mt-6 overflow-x-auto rounded-2xl border border-amber-200">
               <table className="w-full min-w-[640px] text-left text-sm">
-                <thead className="bg-blue-50 text-slate-700">
+                <thead className="bg-amber-50 text-slate-700">
                   <tr>
                     <th className="px-3 py-3">Item</th>
                     <th className="px-3 py-3">Qty</th>
@@ -172,12 +172,12 @@ export default function BillingSystemPage() {
                 </thead>
                 <tbody>
                   {items.map((item) => (
-                    <tr key={item.id} className="border-t border-blue-100 bg-white hover:bg-blue-50/40">
+                    <tr key={item.id} className="border-t border-amber-100 bg-white hover:bg-amber-50/40">
                       <td className="px-3 py-2.5">
                         <select
                           value={item.name}
                           onChange={(e) => updateItem(item.id, "name", e.target.value)}
-                          className="w-full rounded-lg border border-blue-200 px-2 py-2"
+                          className="w-full rounded-lg border border-amber-200 px-2 py-2"
                         >
                           {productCatalog.map((name) => (
                             <option key={name}>{name}</option>
@@ -190,7 +190,7 @@ export default function BillingSystemPage() {
                           min={1}
                           value={item.qty}
                           onChange={(e) => updateItem(item.id, "qty", e.target.value)}
-                          className="w-24 rounded-lg border border-blue-200 px-2 py-2"
+                          className="w-24 rounded-lg border border-amber-200 px-2 py-2"
                         />
                       </td>
                       <td className="px-3 py-2.5">
@@ -199,7 +199,7 @@ export default function BillingSystemPage() {
                           min={0}
                           value={item.rate}
                           onChange={(e) => updateItem(item.id, "rate", e.target.value)}
-                          className="w-32 rounded-lg border border-blue-200 px-2 py-2"
+                          className="w-32 rounded-lg border border-amber-200 px-2 py-2"
                         />
                       </td>
                       <td className="px-3 py-2.5 font-semibold text-slate-800">{rupee(item.qty * item.rate)}</td>
@@ -213,20 +213,20 @@ export default function BillingSystemPage() {
             </div>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-xl bg-blue-50 p-3">
+              <div className="rounded-xl bg-amber-50 p-3">
                 <p className="text-xs text-slate-600">Sub Total</p>
                 <p className="mt-1 text-lg font-bold text-slate-900">{rupee(subtotal)}</p>
               </div>
-              <div className="rounded-xl bg-blue-50 p-3">
+              <div className="rounded-xl bg-amber-50 p-3">
                 <p className="text-xs text-slate-600">GST (13%)</p>
                 <p className="mt-1 text-lg font-bold text-slate-900">{rupee(tax)}</p>
               </div>
-              <div className="rounded-xl bg-blue-50 p-3">
+              <div className="rounded-xl bg-amber-50 p-3">
                 <p className="text-xs text-slate-600">Discount</p>
                 <p className="mt-1 text-lg font-bold text-slate-900">{rupee(discount)}</p>
               </div>
               <div className="rounded-xl bg-[linear-gradient(120deg,#17368d,#2348ad)] p-3 text-white">
-                <p className="text-xs text-blue-100">Grand Total</p>
+                <p className="text-xs text-amber-100">Grand Total</p>
                 <p className="mt-1 text-lg font-bold">{rupee(grandTotal)}</p>
               </div>
             </div>
@@ -250,13 +250,13 @@ export default function BillingSystemPage() {
               </div>
               <div className="mt-4 border-t border-slate-200 pt-3">
                 <p className="text-xs text-slate-600">Payable amount</p>
-                <p className="font-heading text-4xl font-bold text-blue-900">{rupee(grandTotal)}</p>
+                <p className="font-heading text-4xl font-bold text-amber-900">{rupee(grandTotal)}</p>
                 <p className="mt-1 text-xs text-slate-500">Due in 7 days | UPI / NEFT / Cheque accepted</p>
               </div>
               <button className="blue-btn mt-4 w-full px-4 py-2.5 text-sm font-semibold">Send Invoice Link</button>
             </div>
 
-            <div className="mt-4 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm">
+            <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Payment Modes</p>
               <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
                 <div className="rounded-lg bg-white p-2 hover:bg-yellow-50">UPI QR</div>
@@ -271,9 +271,9 @@ export default function BillingSystemPage() {
         <section className="grid gap-6 xl:grid-cols-[1fr_1fr]">
           <article className="soft-card section-glow fade-in-up p-5 sm:p-6">
             <h2 className="text-3xl font-bold text-slate-900">Recent Invoices</h2>
-            <div className="mt-4 overflow-x-auto rounded-2xl border border-blue-200">
+            <div className="mt-4 overflow-x-auto rounded-2xl border border-amber-200">
               <table className="w-full min-w-[560px] text-left text-sm">
-                <thead className="bg-blue-50 text-slate-700">
+                <thead className="bg-amber-50 text-slate-700">
                   <tr>
                     <th className="px-3 py-3">Invoice No</th>
                     <th className="px-3 py-3">Customer</th>
@@ -284,12 +284,12 @@ export default function BillingSystemPage() {
                 </thead>
                 <tbody>
                   {recentInvoices.map((invoice) => (
-                    <tr key={invoice.id} className="border-t border-blue-100 bg-white hover:bg-blue-50/40">
+                    <tr key={invoice.id} className="border-t border-amber-100 bg-white hover:bg-amber-50/40">
                       <td className="px-3 py-2.5 font-semibold text-slate-800">{invoice.id}</td>
                       <td className="px-3 py-2.5 text-slate-700">{invoice.customer}</td>
                       <td className="px-3 py-2.5 text-slate-700">{rupee(invoice.amount)}</td>
                       <td className="px-3 py-2.5">
-                        <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${invoice.due === "Paid" ? "bg-emerald-100 text-emerald-700" : invoice.due === "Pending" ? "bg-amber-100 text-amber-800" : "bg-blue-100 text-blue-700"}`}>
+                        <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${invoice.due === "Paid" ? "bg-emerald-100 text-emerald-700" : invoice.due === "Pending" ? "bg-amber-100 text-amber-800" : "bg-blue-100 text-amber-700"}`}>
                           {invoice.due}
                         </span>
                       </td>
@@ -307,7 +307,7 @@ export default function BillingSystemPage() {
               {collectionRows.map((row) => {
                 const percent = Math.min(100, Math.round((row.achieved / row.target) * 100));
                 return (
-                  <div key={row.zone} className="rounded-2xl border border-blue-200 bg-white p-4 transition hover:-translate-y-1">
+                  <div key={row.zone} className="rounded-2xl border border-amber-200 bg-white p-4 transition hover:-translate-y-1">
                     <div className="mb-2 flex items-center justify-between gap-3 text-sm">
                       <p className="font-semibold text-slate-800">{row.zone}</p>
                       <p className="text-xs text-slate-500">{rupee(row.achieved)} / {rupee(row.target)}</p>
@@ -315,7 +315,7 @@ export default function BillingSystemPage() {
                     <div className="h-2.5 rounded-full bg-slate-200">
                       <div style={{ width: `${percent}%` }} className="h-2.5 rounded-full bg-gradient-to-r from-blue-700 to-blue-400" />
                     </div>
-                    <p className="mt-1 text-xs font-semibold text-blue-800">{percent}% achieved</p>
+                    <p className="mt-1 text-xs font-semibold text-amber-700">{percent}% achieved</p>
                   </div>
                 );
               })}
@@ -337,10 +337,10 @@ export default function BillingSystemPage() {
           <article className="soft-card section-glow fade-in-up p-5 sm:p-6">
             <h3 className="text-2xl font-bold text-slate-900">Upcoming Billing Milestones</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-700">
-              <li className="rounded-xl border border-blue-200 p-3 hover:bg-blue-50">01 Mar: 40% milestone - Apollo Packaging (75kW)</li>
-              <li className="rounded-xl border border-blue-200 p-3 hover:bg-blue-50">03 Mar: Final payment - Sharma Villa (5kW)</li>
-              <li className="rounded-xl border border-blue-200 p-3 hover:bg-blue-50">05 Mar: Advance invoice - Sai Hospital (30kW)</li>
-              <li className="rounded-xl border border-blue-200 p-3 hover:bg-blue-50">07 Mar: O&M billing cycle renewal - 14 clients</li>
+              <li className="rounded-xl border border-amber-200 p-3 hover:bg-amber-50">01 Mar: 40% milestone - Apollo Packaging (75kW)</li>
+              <li className="rounded-xl border border-amber-200 p-3 hover:bg-amber-50">03 Mar: Final payment - Sharma Villa (5kW)</li>
+              <li className="rounded-xl border border-amber-200 p-3 hover:bg-amber-50">05 Mar: Advance invoice - Sai Hospital (30kW)</li>
+              <li className="rounded-xl border border-amber-200 p-3 hover:bg-amber-50">07 Mar: O&M billing cycle renewal - 14 clients</li>
             </ul>
           </article>
 
@@ -349,7 +349,7 @@ export default function BillingSystemPage() {
             <p className="mt-3 text-sm text-slate-700">
               This is a frontend demo billing panel for presentation and workflow validation. Connect it with backend APIs for persistent invoice storage, user roles, and payment gateway reconciliation.
             </p>
-            <div className="mt-4 rounded-2xl bg-[linear-gradient(120deg,#17368d,#2348ad)] p-4 text-sm text-blue-100">
+            <div className="mt-4 rounded-2xl bg-[linear-gradient(120deg,#17368d,#2348ad)] p-4 text-sm text-amber-100">
               <p className="font-semibold text-white">Recommended production modules:</p>
               <ul className="mt-2 space-y-1">
                 <li>Role-based login for Billing Manager / Sales / Accounts</li>
@@ -364,3 +364,4 @@ export default function BillingSystemPage() {
     </div>
   );
 }
+

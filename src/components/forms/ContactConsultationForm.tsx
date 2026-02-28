@@ -50,7 +50,7 @@ export function ContactConsultationForm() {
     <section className="soft-card section-glow overflow-hidden p-5 md:p-7">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-800">Consultation Form</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">Consultation Form</p>
           <h1 className="mt-1 text-4xl font-bold text-slate-900 md:text-5xl">Book a FREE Solar Consultation</h1>
           <p className="mt-2 text-sm text-slate-600">Share details for subsidy guidance, project sizing, and expected bill savings estimate.</p>
         </div>
@@ -66,7 +66,7 @@ export function ContactConsultationForm() {
             required
             value={form.fullName}
             onChange={(e) => setForm((p) => ({ ...p, fullName: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
             placeholder="Enter your full name"
           />
         </div>
@@ -77,7 +77,7 @@ export function ContactConsultationForm() {
             required
             value={form.phone}
             onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
             placeholder="10-digit mobile number"
           />
         </div>
@@ -87,7 +87,7 @@ export function ContactConsultationForm() {
             required
             value={form.city}
             onChange={(e) => setForm((p) => ({ ...p, city: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 px-3 py-2.5 text-sm"
             placeholder="Bhopal"
           />
         </div>
@@ -98,7 +98,7 @@ export function ContactConsultationForm() {
             required
             value={form.billRange}
             onChange={(e) => setForm((p) => ({ ...p, billRange: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 bg-white px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 bg-white px-3 py-2.5 text-sm"
           >
             <option value="">Select bill range</option>
             <option>INR 1,500 - 3,000</option>
@@ -112,7 +112,7 @@ export function ContactConsultationForm() {
           <select
             value={form.service}
             onChange={(e) => setForm((p) => ({ ...p, service: e.target.value }))}
-            className="w-full rounded-lg border border-blue-200 bg-white px-3 py-2.5 text-sm"
+            className="w-full rounded-lg border border-amber-200 bg-white px-3 py-2.5 text-sm"
           >
             <option>Residential Rooftop Solar</option>
             <option>Commercial Solar EPC</option>
@@ -126,3 +126,4 @@ export function ContactConsultationForm() {
     </section>
   );
 }
+

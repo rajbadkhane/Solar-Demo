@@ -46,7 +46,7 @@ export default function ContactPage() {
                 {branches.map((branch, i) => (
                   <Reveal key={branch.city} delayMs={i * 90}>
                     <div className="list-chip rounded-lg px-3 py-3 text-sm text-slate-800">
-                      <p className="font-bold text-blue-900">{branch.city}</p>
+                      <p className="font-bold text-amber-900">{branch.city}</p>
                       <p>{branch.line}</p>
                     </div>
                   </Reveal>
@@ -61,3 +61,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

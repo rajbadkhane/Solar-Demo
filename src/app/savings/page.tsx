@@ -33,7 +33,7 @@ export default function SavingsPage() {
           <section className="section-glow overflow-hidden rounded-3xl bg-[linear-gradient(120deg,#112b7d,#2147aa)] p-8 text-white md:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-sky-200">Savings Center</p>
             <h1 className="mt-2 text-5xl font-bold">Understand cost, subsidy, and return before investing</h1>
-            <p className="mt-4 max-w-3xl text-blue-100">We map your expected generation to actual bill bands and present realistic savings windows instead of inflated promises.</p>
+            <p className="mt-4 max-w-3xl text-amber-100">We map your expected generation to actual bill bands and present realistic savings windows instead of inflated promises.</p>
           </section>
         </Reveal>
 
@@ -56,7 +56,7 @@ export default function SavingsPage() {
           {financeExamples.map((example, i) => (
             <Reveal key={example.title} delayMs={i * 110}>
               <article className="soft-card section-glow p-6">
-                <h2 className="text-2xl font-bold text-blue-900">{example.title}</h2>
+                <h2 className="text-2xl font-bold text-amber-900">{example.title}</h2>
                 <p className="mt-3 text-sm text-slate-700">{example.detail}</p>
               </article>
             </Reveal>
@@ -97,3 +97,4 @@ export default function SavingsPage() {
     </div>
   );
 }
+

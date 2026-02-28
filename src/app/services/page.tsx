@@ -87,7 +87,7 @@ export default function ServicesPage() {
           <section className="section-glow overflow-hidden rounded-3xl bg-[linear-gradient(120deg,#112b7d,#2147aa)] p-8 text-white md:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-sky-200">Service Catalog</p>
             <h1 className="mt-2 text-5xl font-bold">Solar services built for every customer type</h1>
-            <p className="mt-4 max-w-3xl text-blue-100">Agnihotri Solar System delivers structured solar programs for homeowners, institutions, and businesses with transparent quality, warranty, and post-install support.</p>
+            <p className="mt-4 max-w-3xl text-amber-100">Agnihotri Solar System delivers structured solar programs for homeowners, institutions, and businesses with transparent quality, warranty, and post-install support.</p>
           </section>
         </Reveal>
 
@@ -122,7 +122,7 @@ export default function ServicesPage() {
 
         <Reveal delayMs={240}>
           <section className="soft-card section-glow mt-8 p-7">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">Available Products and Systems</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">Available Products and Systems</p>
             <h2 className="mt-2 text-4xl font-bold text-slate-900">Inverter, battery, panel, pump, street light and more</h2>
             <p className="mt-3 text-sm text-slate-700">We supply and install complete solar equipment lineup based on site type, load profile, and budget model.</p>
             <div className="mt-5 grid gap-3 md:grid-cols-2">
@@ -148,7 +148,7 @@ export default function ServicesPage() {
                   <article className="rounded-xl border border-white/25 bg-white/10 p-4">
                     <p className="text-lg font-bold text-yellow-300">{band.segment}</p>
                     <p className="mt-1 text-sm font-semibold text-white">{band.range}</p>
-                    <p className="mt-1 text-sm text-blue-100">{band.note}</p>
+                    <p className="mt-1 text-sm text-amber-100">{band.note}</p>
                   </article>
                 </Reveal>
               ))}
@@ -165,9 +165,9 @@ export default function ServicesPage() {
                 <Reveal key={plan.name} delayMs={i * 90}>
                   <article className="rounded-xl border border-white/25 bg-white/10 p-4">
                     <p className="text-xl font-bold text-yellow-300">{plan.name}</p>
-                    <p className="mt-2 text-sm text-blue-100"><strong>Visits:</strong> {plan.visits}</p>
-                    <p className="mt-1 text-sm text-blue-100"><strong>Coverage:</strong> {plan.coverage}</p>
-                    <p className="mt-1 text-sm text-blue-100"><strong>Best for:</strong> {plan.bestFor}</p>
+                    <p className="mt-2 text-sm text-amber-100"><strong>Visits:</strong> {plan.visits}</p>
+                    <p className="mt-1 text-sm text-amber-100"><strong>Coverage:</strong> {plan.coverage}</p>
+                    <p className="mt-1 text-sm text-amber-100"><strong>Best for:</strong> {plan.bestFor}</p>
                   </article>
                 </Reveal>
               ))}
@@ -191,3 +191,4 @@ export default function ServicesPage() {
     </div>
   );
 }
+
